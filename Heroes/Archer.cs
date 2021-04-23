@@ -11,7 +11,8 @@ namespace ConsoleApp1
 
         public Archer() : base(400, 150)
         {
-
+            activeWeapon = new FlexibleStickWithThread();
+            activeArmor = new Trousers();
         }
 
         public override void Change(Item item)

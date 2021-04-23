@@ -1,12 +1,14 @@
 ﻿using System;
-
+using Heroes;
 namespace Hero
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Archer a = new Archer();
+            Knight b = new Knight();
+
         }
     }
 }

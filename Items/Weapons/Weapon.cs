@@ -11,7 +11,7 @@ namespace ConsoleApp1
         {
             damage = Damage;
         }
-        virtual override public void Use(Hero hero, int power)
+        public virtual void Use(Hero hero, int power)
         {
             if (!isBroken)
             {

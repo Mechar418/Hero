@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    public class FlexibleStickWithThread : ArcherWeapon
+    class FlexibleStickWithThread : ArcherWeapon
     {
         public FlexibleStickWithThread() : base(100, 100, 10, 5)
         {

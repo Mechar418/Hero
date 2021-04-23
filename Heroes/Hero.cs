@@ -8,18 +8,18 @@ namespace ConsoleApp1
     abstract class Hero
     {
         public int health { get; protected set; }
-        protected int power { get; private set; }
+        public int power { get; private set; }
         public bool isAlive {get; protected set;}
         public List<Weapon> weapons { get; protected set;}
         public List<Armor> armor { get; protected set;}
         public Weapon activeWeapon {get; protected set;}
         public Armor activeArmor {get; protected set;}
 
-        protected Hero(int Health, int Power)
+        public Hero(int Health, int Power)
         {
             health = Health;
             power = Power;
-            Alive = true;
+            isAlive = true;
         }
         public void TakeDamage(int Damage)
         {   

@@ -1,0 +1,5 @@
+/home/bogdan/Документы/Prog/C#/Hero/obj/Debug/net5.0/Hero.csprojAssemblyReference.cache
+/home/bogdan/Документы/Prog/C#/Hero/obj/Debug/net5.0/Hero.GeneratedMSBuildEditorConfig.editorconfig
+/home/bogdan/Документы/Prog/C#/Hero/obj/Debug/net5.0/Hero.AssemblyInfoInputs.cache
+/home/bogdan/Документы/Prog/C#/Hero/obj/Debug/net5.0/Hero.AssemblyInfo.cs
+/home/bogdan/Документы/Prog/C#/Hero/obj/Debug/net5.0/Hero.csproj.CoreCompileInputs.cache

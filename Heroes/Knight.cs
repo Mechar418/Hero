@@ -11,7 +11,8 @@ namespace ConsoleApp1
 
         public Knight() : base(500, 100)
         {
-
+            activeWeapon = new WoodenSword();
+            activeArmor = new CultistRobe();
         }
 
         public override void Change(Item item)
