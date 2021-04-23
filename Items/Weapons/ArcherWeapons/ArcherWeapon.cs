@@ -1,0 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    abstract class ArcherWeapon : Weapon
+    {
+        protected ArcherWeapon(int Money, int Endurance, int Fragility, int Damage) : base(Money, Endurance, Fragility, Damage)
+        {
+
+        }
+    }
+}
