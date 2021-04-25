@@ -28,7 +28,7 @@ namespace ConsoleApp1
                 }
             }
             else
-                1 / 0;
+                Console.WriteLine("Item is broken");
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/bogdan/Документы/Prog/C#/Hero/Hero.csproj": {}
+    "/home/bogdan/RiderProjects/Hero/Hero.csproj": {}
   },
   "projects": {
-    "/home/bogdan/Документы/Prog/C#/Hero/Hero.csproj": {
+    "/home/bogdan/RiderProjects/Hero/Hero.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/bogdan/Документы/Prog/C#/Hero/Hero.csproj",
+        "projectUniqueName": "/home/bogdan/RiderProjects/Hero/Hero.csproj",
         "projectName": "Hero",
-        "projectPath": "/home/bogdan/Документы/Prog/C#/Hero/Hero.csproj",
+        "projectPath": "/home/bogdan/RiderProjects/Hero/Hero.csproj",
         "packagesPath": "/home/bogdan/.nuget/packages/",
-        "outputPath": "/home/bogdan/Документы/Prog/C#/Hero/obj/",
+        "outputPath": "/home/bogdan/RiderProjects/Hero/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/bogdan/.nuget/NuGet/NuGet.Config"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/120/sdk/5.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/current/sdk/5.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

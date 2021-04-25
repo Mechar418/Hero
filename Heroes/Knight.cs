@@ -17,24 +17,26 @@ namespace ConsoleApp1
 
         public override void Change(Item item)
         {
-            if (armor.Contains(item))
+            if (inventory.Contains(item))
             {
                 if (item is KnightArmor)
                 {
-                    item a = activeArmor;
-                    armor.Remove(item);
-                    activeArmor = item;
-                    armor.Add(a);
+                    Armor a = activeArmor;
+                    inventory.Remove(item);
+                    activeArmor = item as Armor;
+                    inventory.Add(a);
                 }
-            } if (weapons.Contains(item))
-            {
-                if (item is KnightWeapon)
+                else if (item is KnightWeapon)
                 {
-                    item a = activeWeapon;
-                    weapons.Remove(item);
-                    activeWeapon = item;
-                    weapons.Add(item);
+                    Weapon a = activeWeapon;
+                    inventory.Remove(item);
+                    activeWeapon = item as Weapon;
+                    inventory.Add(a);
                 }
+            }
+            else
+            {
+                Console.WriteLine("Hero doesnt this item");
             }
         }
     }

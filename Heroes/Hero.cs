@@ -10,8 +10,7 @@ namespace ConsoleApp1
         public int health { get; protected set; }
         public int power { get; private set; }
         public bool isAlive {get; protected set;}
-        public List<Weapon> weapons { get; protected set;}
-        public List<Armor> armor { get; protected set;}
+        public List<Item> inventory { get; protected set;}
         public Weapon activeWeapon {get; protected set;}
         public Armor activeArmor {get; protected set;}
 
@@ -25,13 +24,13 @@ namespace ConsoleApp1
         {   
             if (activeArmor.endurance > 0)
             {
-                if (activeArmor.protection < damage)
-                    health -= damage - activeArmor.protection;
+                if (activeArmor.protection < Damage)
+                    health -= Damage - activeArmor.protection;
                 activeArmor.Use();
             }
             else
             {
-                health -= damage;
+                health -= Damage;
             }
             if (health <= 0)
             {
@@ -42,22 +41,20 @@ namespace ConsoleApp1
         public void Atack(Hero hero)
         {
             if (isAlive)
+            {
                 if (activeWeapon.endurance > 0)
                     activeWeapon.Use(hero, power);
+            }
             else
-                1 / 0;
+                Console.WriteLine("Hero is dead");
         }
         public void TakeItem(Item item)
         {
-            if (item is Weapon)
-                weapons.Add(item);
-            else if (item is Armor)
-                armor.Add(item);
+            inventory.Add(item);
         }
         public void Dispose(Item item)
         {
-            armor.Remove(item);
-            weapons.Remove(item);
+            inventory.Remove(item);
         }
         public abstract void Change(Item item);
     }
