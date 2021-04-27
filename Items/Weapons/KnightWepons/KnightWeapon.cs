@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     abstract class KnightWeapon : Weapon
     {
-        public KnightWeapon(int Money, int Endurance, int Fragility, int Damage) : base(Money, Endurance, Fragility, Damage)
+        public KnightWeapon(int money, int endurance, int fragility, int damage) : base(money, endurance, fragility, damage)
         {
 
         }

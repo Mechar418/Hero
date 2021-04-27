@@ -10,16 +10,18 @@ namespace Hero
             Archer a = new Archer();
             Knight b = new Knight();
             b.TakeItem(new SwordAtomicBomb());
-            Console.WriteLine(Convert.ToString(b.inventory));
-            /*
-            while (a.isAlive && b.isAlive)
+            Console.WriteLine(b.Inventory);
+            while (a.IsAlive && b.IsAlive)
             {
                 a.Atack(b);
-                Console.WriteLine("Knight health is " + Convert.ToString(b.health));
+                Console.WriteLine("Knight health is " + Convert.ToString(b.Health));
                 b.Atack(a);
-                Console.WriteLine("Archer health is " + Convert.ToString(a.health));
+                Console.WriteLine("Archer health is " + Convert.ToString(a.Health));
             }
-            */
+            if (a.IsAlive)
+                Console.WriteLine("Archer won");
+            else
+                Console.WriteLine("Knight won");
         }
     }
 }

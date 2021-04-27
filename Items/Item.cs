@@ -6,25 +6,25 @@ namespace ConsoleApp1
 {
     abstract class Item
     {
-        public int money { get; protected set; }
-        public int endurance { get; protected set; }
-        public int fragility {get; set;}
-        public bool isBroken {get; protected set;}
-        protected Item(int Money, int Endurance, int Fragility)
+        public int Money { get; protected set; }
+        public int Endurance { get; protected set; }
+        public int Fragility {get; set;}
+        public bool IsBroken {get; protected set;}
+        protected Item(int money, int endurance, int fragility)
         {
-            money = Money;
-            endurance = Endurance;
-            fragility = Fragility;
+            Money = money;
+            Endurance = endurance;
+            Fragility = fragility;
         }
         virtual public void Use()
         {
-            if (!isBroken)
+            if (!IsBroken)
             {
-                endurance -= fragility;
-                if (endurance <= 0)
+                Endurance -= Fragility;
+                if (Endurance <= 0)
                 {
-                    isBroken = true;
-                    endurance = 0;
+                    IsBroken = true;
+                    Endurance = 0;
                 }
             }
             else

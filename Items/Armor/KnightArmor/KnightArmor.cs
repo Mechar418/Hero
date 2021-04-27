@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     abstract class KnightArmor : Armor
     {
-        public KnightArmor(int Money, int Endurance, int Fragility, int Protection) : base(Money, Endurance, Fragility, Protection)
+        public KnightArmor(int money, int endurance, int fragility, int protection) : base(money, endurance, fragility, protection)
         {
 
         }

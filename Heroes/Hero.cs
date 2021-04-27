@@ -7,54 +7,55 @@ namespace ConsoleApp1
 {
     abstract class Hero
     {
-        public int health { get; protected set; }
-        public int power { get; private set; }
-        public bool isAlive {get; protected set;}
-        public List<Item> inventory { get; protected set;}
-        public Weapon activeWeapon {get; protected set;}
-        public Armor activeArmor {get; protected set;}
+        public int Health { get; protected set; }
+        public int Power { get; private set; }
+        public bool IsAlive {get; protected set;}
+        public List<Item> Inventory { get; protected set;}
+        public Weapon ActiveWeapon {get; protected set;}
+        public Armor ActiveArmor {get; protected set;}
 
-        public Hero(int Health, int Power)
+        public Hero(int health, int power)
         {
-            health = Health;
-            power = Power;
-            isAlive = true;
+            this.Health = health;
+            this.Power = power;
+            IsAlive = true;
+            Inventory = new List<Item>();
         }
-        public void TakeDamage(int Damage)
+        public void TakeDamage(int damage)
         {   
-            if (activeArmor.endurance > 0)
+            if (ActiveArmor.Endurance > 0)
             {
-                if (activeArmor.protection < Damage)
-                    health -= Damage - activeArmor.protection;
-                activeArmor.Use();
+                if (ActiveArmor.Protection < damage)
+                    Health -= damage - ActiveArmor.Protection;
+                ActiveArmor.Use();
             }
             else
             {
-                health -= Damage;
+                Health -= damage;
             }
-            if (health <= 0)
+            if (Health <= 0)
             {
-                isAlive = false;
-                health = 0;
+                IsAlive = false;
+                Health = 0;
             }
         }
         public void Atack(Hero hero)
         {
-            if (isAlive)
+            if (IsAlive)
             {
-                if (activeWeapon.endurance > 0)
-                    activeWeapon.Use(hero, power);
+                if (ActiveWeapon.Endurance > 0)
+                    ActiveWeapon.Use(hero, Power);
             }
             else
                 Console.WriteLine("Hero is dead");
         }
         public void TakeItem(Item item)
         {
-            inventory.Add(item);
+            Inventory.Add(item);
         }
         public void Dispose(Item item)
         {
-            inventory.Remove(item);
+            Inventory.Remove(item);
         }
         public abstract void Change(Item item);
     }

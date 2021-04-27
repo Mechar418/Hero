@@ -6,21 +6,21 @@ namespace ConsoleApp1
 {
     abstract class Weapon : Item
     {
-        public int damage { get; private set; }
-        protected Weapon(int Money, int Endurance, int Fragility, int Damage) : base(Money, Endurance, Fragility)
+        public int Damage { get; private set; }
+        protected Weapon(int money, int endurance, int fragility, int damage) : base(money, endurance, fragility)
         {
-            damage = Damage;
+            Damage = damage;
         }
         public virtual void Use(Hero hero, int power)
         {
-            if (!isBroken)
+            if (!IsBroken)
             {
-                endurance -= fragility;
-                hero.TakeDamage(damage + power);
-                if (endurance <= 0)
+                Endurance -= Fragility;
+                hero.TakeDamage(Damage + power);
+                if (Endurance <= 0)
                 {
-                    isBroken = true;
-                    endurance = 0;
+                    IsBroken = true;
+                    Endurance = 0;
                 }
             }
             else

@@ -11,27 +11,27 @@ namespace ConsoleApp1
 
         public Archer() : base(400, 150)
         {
-            activeWeapon = new FlexibleStickWithThread();
-            activeArmor = new Trousers();
+            ActiveWeapon = new FlexibleStickWithThread();
+            ActiveArmor = new Trousers();
         }
 
         public override void Change(Item item)
         {
-            if (inventory.Contains(item))
+            if (Inventory.Contains(item))
             {
                 if (item is ArcherArmor)
                 {
-                    Armor a = activeArmor;
-                    inventory.Remove(item);
-                    activeArmor = item as Armor;
-                    inventory.Add(a);
+                    Armor a = ActiveArmor;
+                    Inventory.Remove(item);
+                    ActiveArmor = item as Armor;
+                    Inventory.Add(a);
                 }
                 else if (item is ArcherWeapon)
                 {
-                    Weapon a = activeWeapon;
-                    inventory.Remove(item);
-                    activeWeapon = item as Weapon;
-                    inventory.Add(a);
+                    Weapon a = ActiveWeapon;
+                    Inventory.Remove(item);
+                    ActiveWeapon = item as Weapon;
+                    Inventory.Add(a);
                 }
             }
             else

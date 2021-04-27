@@ -11,27 +11,27 @@ namespace ConsoleApp1
 
         public Knight() : base(500, 100)
         {
-            activeWeapon = new WoodenSword();
-            activeArmor = new CultistRobe();
+            ActiveWeapon = new WoodenSword();
+            ActiveArmor = new CultistRobe();
         }
 
         public override void Change(Item item)
         {
-            if (inventory.Contains(item))
+            if (Inventory.Contains(item))
             {
                 if (item is KnightArmor)
                 {
-                    Armor a = activeArmor;
-                    inventory.Remove(item);
-                    activeArmor = item as Armor;
-                    inventory.Add(a);
+                    Armor a = ActiveArmor;
+                    Inventory.Remove(item);
+                    ActiveArmor = item as Armor;
+                    Inventory.Add(a);
                 }
                 else if (item is KnightWeapon)
                 {
-                    Weapon a = activeWeapon;
-                    inventory.Remove(item);
-                    activeWeapon = item as Weapon;
-                    inventory.Add(a);
+                    Weapon a = ActiveWeapon;
+                    Inventory.Remove(item);
+                    ActiveWeapon = item as Weapon;
+                    Inventory.Add(a);
                 }
             }
             else
