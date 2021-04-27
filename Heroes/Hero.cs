@@ -44,7 +44,7 @@ namespace ConsoleApp1
             if (IsAlive)
             {
                 if (ActiveWeapon.Endurance > 0)
-                    hero.TakeDamage(Power + ActiveWeapon.Use(this));
+                    hero.TakeDamage(Power + ActiveWeapon.Use());
             }
             else
                 Console.WriteLine("Hero is dead");

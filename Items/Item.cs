@@ -16,7 +16,7 @@ namespace ConsoleApp1
             Endurance = endurance;
             Fragility = fragility;
         }
-        virtual public void Use()
+        virtual public void Use(Hero hero)
         {
             if (!IsBroken)
             {

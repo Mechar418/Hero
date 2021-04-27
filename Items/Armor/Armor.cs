@@ -11,5 +11,19 @@ namespace ConsoleApp1
         {
             Protection = protection;
         }
+        virtual public void Use()
+        {
+            if (!IsBroken)
+            {
+                Endurance -= Fragility;
+                if (Endurance <= 0)
+                {
+                    IsBroken = true;
+                    Endurance = 0;
+                }
+            }
+            else
+                Console.WriteLine("Item is broken");
+        }
     }
 }

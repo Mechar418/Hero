@@ -11,7 +11,7 @@ namespace ConsoleApp1
         {
             Damage = damage;
         }
-        public virtual int Use(Hero hero)
+        public virtual int Use()
         {
             if (!IsBroken)
             {
