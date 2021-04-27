@@ -11,20 +11,23 @@ namespace ConsoleApp1
         {
             Damage = damage;
         }
-        public virtual void Use(Hero hero, int power)
+        public virtual int Use(Hero hero)
         {
             if (!IsBroken)
             {
                 Endurance -= Fragility;
-                hero.TakeDamage(Damage + power);
                 if (Endurance <= 0)
                 {
                     IsBroken = true;
                     Endurance = 0;
                 }
+
+                return Damage;
             }
             else
                 Console.WriteLine("Item is broken");
+
+            return 0;
         }
     }
 }
